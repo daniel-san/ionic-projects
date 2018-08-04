@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--h2>Welcome to Ionic!</h2>
+  <p>
+    This starter project comes with simple tabs-based layout for apps
+    that are going to primarily use a Tabbed UI.
+  </p>
+  <p>
+    Take a look at the <code>src/pages/</code> directory to add or change tabs,
+    update any existing page or create new pages.
+  </p-->
+
+  <h2>Users available</h2>
+
+  <table style="width:100%">
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td style="text-align:center">{{user.username}}</td>
+      <td style="text-align:center">{{user.number}}</td>
+    </tr>
+  </table>
+</ion-content>
