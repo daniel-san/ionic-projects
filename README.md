@@ -1,2 +1,2 @@
 # ionic-projects
-Repository for some projects using Ionic
+Repository for test projects using Ionic
