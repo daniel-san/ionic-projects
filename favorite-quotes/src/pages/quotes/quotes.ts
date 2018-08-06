@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, AlertController } from 'ionic-angular'
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { Quote } from '../../data/quote.interface';
 import { QuotesService } from '../../services/quotes';
@@ -27,7 +27,7 @@ export class QuotesPage implements OnInit {
   // Add the elvis operator (?) in template to use this approach
   //}
 
-  onAddToFavorite(selectedQuote: Quote){
+  onAddToFavorites(selectedQuote: Quote){
     const alert = this.alertCtrl.create({
       title: 'Add Quote',
       subTitle: 'Are you sure?',
@@ -48,5 +48,32 @@ export class QuotesPage implements OnInit {
     });
 
     alert.present();
+  }
+
+  onRemoveFromFavorites(quote: Quote){
+    const alert = this.alertCtrl.create({
+      title: "Remove Quote",
+      subTitle: "Are you sure?",
+      message: "Are you sure you want to remove the quote?",
+      buttons: [{
+        text: 'Yes, go ahead',
+        handler: () => {
+          this.quotesService.removeQuoteFromFavorites(quote);
+        }
+      },
+      {
+        text: "No, I changed my mind!",
+        role: 'cancel',
+        handler: () => {
+          console.log ('Removal Cancelled');
+        }
+      }]
+    });
+
+    alert.present();
+  }
+
+  isFavorite(quote: Quote){
+    return this.quotesService.isQuoteFavorite(quote);
   }
 }
