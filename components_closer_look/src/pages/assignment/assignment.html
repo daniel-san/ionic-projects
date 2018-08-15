@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Assignment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row text-center>
+      <ion-col>
+          <h3>Enter the right code</h3> 
+          <p *ngIf="!correctCode">Tap twice, press four times</p>
+          <p *ngIf="correctCode">You Won!</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+      <ion-item>
+        <p>Tapped: {{ tapsNumber }}</p>
+      </ion-item>
+      <ion-item>
+        <p>Pressed: {{ pressesNumber }}</p>
+      </ion-item>
+    </ion-list>
+
+    <app-reset (didReset)="onDidReset($event)"></app-reset>
+
+    <ion-row>
+        <ion-col text-center>
+          <div class="gestures"
+            (tap)="addTap()">
+            Tap Here
+          </div>
+        </ion-col>
+        
+        <ion-col text-center>
+          <div class="gestures"
+            (press)="addPress()">
+            Press here
+          </div>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

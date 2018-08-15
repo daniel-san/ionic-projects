@@ -1,0 +1,7 @@
+{
+  "name": "components_closer_look",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
