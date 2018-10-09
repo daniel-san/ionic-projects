@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ViewController, NavParams } from 'ionic-angular';
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-quote',
   templateUrl: 'quote.html',

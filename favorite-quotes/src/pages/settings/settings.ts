@@ -4,7 +4,7 @@ import { Toggle } from 'ionic-angular';
 
 import { SettingsService } from '../../services/settings';
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-settings',
   templateUrl: 'settings.html',

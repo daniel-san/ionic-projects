@@ -5,7 +5,7 @@ import { QuotesPage } from '../quotes/quotes';
 import { Quote } from '../../data/quote.interface';
 import quotes from '../../data/quotes';
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-library',
   templateUrl: 'library.html',

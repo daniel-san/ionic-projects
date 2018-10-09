@@ -7,7 +7,7 @@ import { Quote } from '../../data/quote.interface';
 import { SettingsService } from '../../services/settings';
 
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-favorites',
   templateUrl: 'favorites.html',
